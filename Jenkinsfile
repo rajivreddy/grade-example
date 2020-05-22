@@ -2,7 +2,7 @@ def customImage = ""
 
 def notifyviaMail(String buildStatus = 'SUCCESS') {
     def decodedJobName = env.JOB_NAME.replaceAll("%2F", "/")
-    emailext attachLog: true, body: "${decodedJobName} - Build # ${env.BUILD_NUMBER} - ${buildStatus}: \n SSH URL:${ssh_url} \nCheck console output at ${env.BUILD_URL} to view the results in Attachments \n \n Thank you.", subject: "${decodedJobName}- Report", to: 'oncorps@srijan.net, eng.info@oncorps.io'
+    emailext attachLog: true, body: "${decodedJobName} - Build # ${env.BUILD_NUMBER} - ${buildStatus}: \n SSH URL:${ssh_url} \nCheck console output at ${env.BUILD_URL} to view the results in Attachments \n \n Thank you.", subject: "${decodedJobName}- Report", to: 'admin@example.com'
 }
 
 pipeline {
